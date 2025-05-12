@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genre Prediction</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+      <nav>
+        <ul>
+          <li><a href='https://www.notion.so/sync-with-data-d27dafc5b0f948419d37b816c56da903?pvs=4'>About the Project</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-page">
+  <h1>Finding the perfect soundtrack through 
+    <b class="data">data</b> and <b class="instinct">instinct</b></h1>
+  <h3>Analyzing trends to match the right music to every TV story</h3>
+  <h4><b>Note:</b> These song recommendations come from a <b>small sample size,</b> so they may <b>not</b> capture every option out there.</h4>
+
+
+    <img src="media/Help Button.png" alt="help-button" class="help-button" width="50px">
+
+  <div id="need-help" class="help-card hidden">
+    <h2>Need Help?</h2>
+    <h4>If you're having trouble or need help using the application, here's what you can do:</h4>
+    <ul class="instructions">
+        <li class="title"><b>Can't Select a TV Genre?</b></li>
+        <li class="indent">Make sure you're choosing one of the listed genres. Click on the genre to select it, and the list should update to show the available genres. If you still can't select, try refreshing the page or clearing your browser cache.</li>
+        <li class="title"><b>No Recommendations After Clicking 'Search'?</b></li>
+        <li class="indent">Double-check that you’ve selected a genre from the dropdown list. If the issue persists, please wait a moment and try again.</li>
+        <li class="title"><b>Songs Not Matching What You Expected?</b></li>
+          <li class="indent">The recommendations are based on a sample of TV genre data. The system tries to predict the most fitting songs, but it might not cover every scenario or every genre in detail. Try exploring other genres or consider a different selection.</li>
+    </ul>
+    <button class="close-btn-help">&times;</button>
+</div>
+  <div class="search-container">
+  <select id="genreInput">
+    <option value="" disabled selected>Select a TV Genre</option>
+    <option value="Action">Action 💥</option>
+    <option value="Thriller">Thriller 😱</option>
+    <option value="Comedy">Comedy 🤣</option>
+    <option value="Crime">Crime 🕵️‍♂️</option>
+    <option value="Drama">Drama 🎭</option>
+    <option value="Fantasy">Fantasy 🦄</option>
+    <option value="Horror">Horror 🧟</option>
+    <option value="Reality-TV">Reality-TV 🌹</option>
+    <option value="Romance">Romance ❤️</option>
+    <option value="Sci-Fi">Sci-Fi 👽 </option>
+  </select>
+    <button id="predictButton">Search</button>
+    <div class="result-container">
+  <p id="result"></p>
+</div>
+</div>
+</div>
+  <script src="main.js"></script>
+</body>
+</html>

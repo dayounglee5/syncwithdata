@@ -1,0 +1,219 @@
+@font-face {
+    font-family: Lato;
+    src: url(media/Lato-Regular.woff2);
+    font-weight: 100 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: Lato-Extra-Bold;
+    src: url(media/Lato-Black.woff2);
+}
+@font-face {
+    font-family: Lato-Bold;
+    src:url(media/Lato-Bold.woff2);
+}
+@font-face {
+    font-family: Lato-Light;
+    src: url(media/Lato-Light.woff2);
+}
+@font-face {
+    font-family: Lato-Thin;
+    src: url(media/Lato-Thin.woff2);
+}
+@font-face {
+    font-family: Roboto;
+    src: url(media/Roboto-VariableFont_wdth\,wght.woff2);
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+:root{
+    --color-base: #FFFFFF;
+    --main-text-color: #1D1E18;
+    --secondary-color: #3E92CC;
+    --tertiary-color:#EAEAEA;
+
+    --background-color: var(--color-base);
+
+    --main-font: "Lato";
+    --extra-bold-main-font: "Lato-Extra-Bold";
+    --bold-main-font: "Lato-Bold";
+    --light-main-font: "Lato-Light";
+    --thin-main-font: "Lato-Thin";
+    --secondary-font: "Roboto";
+}
+
+header{
+    background-color: var(--background-color);
+    padding: 30px 35px;
+    margin: 0;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+nav ul, li{
+    font-family: var(--main-font);
+    color: var(--main-text-color);
+    list-style-type: none;
+    text-align: center;
+}
+nav ul li a {
+    color: var(--main-text-color);
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+  }
+
+b{
+    font-family: var(--bold-main-font);
+}
+
+.main-page{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+h1{
+    font-family:var(--main-font);
+    font-weight: 900;
+    font-size: 35px;
+    color: var(--main-text-color);
+    text-align: center;
+    grid-row: 2;
+}
+.data{
+    color: var(--secondary-color);
+}
+.instinct{
+    color: var(--secondary-color);
+}
+
+h3{
+    font-family: var(--light-main-font);
+    color: var(--main-text-color);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    grid-row: 3;
+    margin-top: 0rem;
+}
+
+h4{
+    font-family: var(--light-main-font);
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    grid-row: 4;
+    margin: 0;
+    margin-bottom: 2rem;
+
+}
+
+.search-container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1000px;
+    grid-template-rows: 1fr;
+}
+#genreInput{
+    font-family: var(--main-font);
+    grid-row: 1;
+    width: 500px;
+    justify-self: start;
+    grid-column: 1;
+    border-radius: 25px;
+    border: 0.5px solid var(--main-text-color);
+    padding: 15px;
+    margin-left: 8rem;
+}
+
+#predictButton{
+    font-family: var(--main-font);
+    grid-row: 1;
+    grid-column: 1;
+    width: 150px;
+    margin-right: 10rem;
+    justify-self: end;
+    border-radius: 25px;
+    border: none;
+    padding: 15px;
+    background-color: var(--secondary-color);
+    color: var(--color-base);
+    cursor: pointer;
+}
+
+.result-container{
+    display: grid;
+    grid-template-columns: 700px;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+#result{
+    font-family: var(--main-font);
+    line-height: 150%;
+
+    ul,li{
+        text-align: left;
+        list-style-type: disc;
+        margin-left: -0.5rem;
+    }
+
+}
+
+.help-button{
+    grid-row: 1;
+    justify-self: end;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.help-card{
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    background-color: var(--secondary-color);
+    color: var(--color-base);
+    padding: 30px 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    max-width: 520px;
+    text-align: center;
+    
+    h2{
+        font-family: var(--bold-main-font);
+        color: var(--color-base);
+        font-size: 25px;
+    }
+
+    h4{
+        font-family: var(--main-font);
+        color: var(--color-base);
+        font-size: 20px;
+    }
+    ul,li{
+        font-family: var(--main-font);
+        color: var(--color-base);
+        list-style-type: none;
+        text-align: left;
+        margin-left: -0.5rem;
+        line-height: 180%;
+    }
+
+    .indent{
+        margin-left: 1rem;
+    }
+    .title{
+        font-size: 20px;
+    }
+}
+
+.hidden{
+    display: none;
+}
